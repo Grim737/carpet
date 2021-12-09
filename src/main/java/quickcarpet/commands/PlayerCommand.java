@@ -145,7 +145,7 @@ public class PlayerCommand {
         if (!context.getSource().getMinecraftServer().getPlayerManager().isOperator(sendingPlayer.getGameProfile())) {
             if (sendingPlayer != player && !(player instanceof FakeServerPlayerEntity)) {
                 m(context.getSource(), ts("command.player.notOperator", Formatting.RED));
-                return false;
+                return true;
             }
         }
         return true;
